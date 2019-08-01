@@ -2,7 +2,7 @@
   "name": "openldapTSdecorator",
   "version": "1.0.0",
   "main": "index.js",
-  "keywords": [],
+  "keywords": ["Openldap", "Typescript", "ldapjs-client","decorator"],
   "author": "Alistair Lenhard, contact: alistair.lenhard@googlemail.com",
   "license": "MIT",
   "dependencies": {

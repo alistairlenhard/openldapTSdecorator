@@ -1,0 +1,25 @@
+{
+  "name": "openldapTSdecorator",
+  "version": "1.0.0",
+  "main": "index.js",
+  "keywords": [],
+  "author": "Alistair Lenhard, contact: alistair.lenhard@googlemail.com",
+  "license": "MIT",
+  "dependencies": {
+    "@types/lodash": "^4.14.136",
+    "@types/node": "^12.6.8",
+    "ldapjs-client": "^0.1.1",
+    "lodash": "^4.17.15"
+  },
+  "scripts": {
+    "startNode": "node distribution/index",
+    "compile": "tsc",
+    "deploy": "npm run compile & npm run startNode"
+  },
+  "include": [
+    "src"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}

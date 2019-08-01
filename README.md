@@ -29,10 +29,26 @@ https://www.userbooster.de/en/download/userbooster-light.aspx
  Note: You will need the same credentials and Manager user for your app to connect to the openldap service later on.
  
  # Create test data for your openldap server
- 1. in the UI, create an organizational unit **testunit1**
- 2. select the unit
- 3. create a group **group1** within **testuni1**
- 4. create a group **group2** within **testunit1**
- 5. in **group1** create a user **Maria Maier**
- 6. in **group2** create a user **Maximilian Maier**
+ 1. in the UI, create a user **Maria Maier**
+ 2. in the UI, create a user **Alexander Maier**
+ 3. create a group **group1** and assign **Maria Maier** as a member
+ 3. create a group **group1** and assign **Alexander Maier** as a member
 
+# build this project
+1. clone this repository from git `https://github.com/alistairlenhard/openldapTSdecorator.git`
+2. call `npm install` to create the node_module folder as per package.json dependency definition
+3. call `npm run deploy`
+
+#### You should get this result in your terminal:
+
+`
+Connected successfully.
+[{"dn":"cn=Maria Maier,cn=group1,dc=maxcrc,dc=com","cn":"Maria Maier","sn":"Maier"}]
+Alexander Maier not found or does not belong to this group1.
+[{"dn":"cn=Alexander Maier,cn=group2,dc=maxcrc,dc=com","cn":"Alexander Maier","sn":"Maier"}]
+method A was called.
+user Alexander Maier can't invoke methodC
+method B was called.
+`
+
+Any Problems? Log an issue on git.
